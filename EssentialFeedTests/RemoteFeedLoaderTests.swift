@@ -21,31 +21,35 @@ class HTTPClientSpy: HTTPClient {
 
 class RemoteFeedLoader {
     private let client: HTTPClient
+    private let url: URL
     
-    init(client: HTTPClient) {
+    init(url: URL, client: HTTPClient) {
         self.client = client
+        self.url = url
     }
     
     func load() {
-        self.client.get(from: URL(string: "https://a-given-url.com")!)
+        self.client.get(from: self.url)
     }
 }
 
 class RemoteFeedLoaderTests: XCTestCase {
     
     func test_init_doesNotRequestDataFromURL() {
+        let url = URL(string: "https://a-url.com")!
         let client = HTTPClientSpy()
-        _ = RemoteFeedLoader(client: client)
+        _ = RemoteFeedLoader(url: url, client: client)
         
         XCTAssertNil(client.requestedURL)
     }
     
     func test_loadRequestDataFromURL() {
+        let url = URL(string: "https://a-give-url.com")!
         let client = HTTPClientSpy()
-        let sut = RemoteFeedLoader(client: client)
+        let sut = RemoteFeedLoader(url: url, client: client)
         
         sut.load()
         
-        XCTAssertNotNil(client.requestedURL)
+        XCTAssertEqual(client.requestedURL, url)
     }
 }
