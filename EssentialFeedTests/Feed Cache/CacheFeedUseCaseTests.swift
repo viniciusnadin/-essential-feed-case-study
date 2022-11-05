@@ -32,14 +32,15 @@ class FeedStore {
     typealias DeletionCompletion = (Error?) -> Void
     typealias InsertionCompletion = (Error?) -> Void
     
-    enum ReceivedMessages: Equatable {
+    enum ReceivedMessage: Equatable {
         case deleteCacheFeed
-        case insert(items: [FeedItem], timestamp: Date)
+        case insert([FeedItem], Date)
     }
+    
+    private(set) var receivedMessages = [ReceivedMessage]()
     
     private var deletionCompletions = [DeletionCompletion]()
     private var insertionCompletions = [InsertionCompletion]()
-    private(set) var receivedMessages = [ReceivedMessages]()
     
     func deleteCacheFeed(completion: @escaping DeletionCompletion) {
         self.deletionCompletions.append(completion)
@@ -64,7 +65,7 @@ class FeedStore {
     
     func insert(_ items: [FeedItem], timestamp: Date, completion: @escaping InsertionCompletion) {
         self.insertionCompletions.append(completion)
-        self.receivedMessages.append(.insert(items: items, timestamp: timestamp))
+        self.receivedMessages.append(.insert(items, timestamp))
     }
 }
 
@@ -103,7 +104,7 @@ class CacheFeedUseCaseTests: XCTestCase {
         sut.save(items) { _ in }
         store.completeDeletionSuccessfully()
         
-        XCTAssertEqual(store.receivedMessages, [.deleteCacheFeed, .insert(items: items, timestamp: timestamp)])
+        XCTAssertEqual(store.receivedMessages, [.deleteCacheFeed, .insert(items, timestamp)])
     }
     
     func test_save_failsOnDeletionError() {
