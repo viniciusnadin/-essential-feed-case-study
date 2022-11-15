@@ -8,6 +8,8 @@
 import XCTest
 import EssentialFeed
 
+import CoreData
+
 class CoreDataFeedStore: FeedStore {
     func deleteCachedFeed(completion: @escaping DeletionCompletion) {
     }
@@ -18,6 +20,19 @@ class CoreDataFeedStore: FeedStore {
     func retrieve(completion: @escaping RetrievalCompletion) {
         completion(.empty)
     }
+}
+
+private class ManagedCache: NSManagedObject {
+    @NSManaged var timestamp: Date
+    @NSManaged var feed: NSOrderedSet
+}
+
+private class ManagedFeedImage: NSManagedObject {
+    @NSManaged var id: UUID
+    @NSManaged var imageDescription: String?
+    @NSManaged var location: String?
+    @NSManaged var url: URL?
+    @NSManaged var cache: ManagedCache
 }
 
 class CoreDataFeedStoreTests: XCTestCase, FeedStoreSpecs {
