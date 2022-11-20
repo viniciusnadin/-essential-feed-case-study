@@ -116,7 +116,7 @@ class CodableFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
         
         deleteCache(from: sut)
         
-        expect(sut, toRetrieve: .success(.empty))
+        expect(sut, toRetrieve: .success(.none))
     }
     
     func test_delete_deliversErrorOnDeletionError() {
