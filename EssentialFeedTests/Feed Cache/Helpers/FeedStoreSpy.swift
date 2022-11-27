@@ -27,19 +27,19 @@ class FeedStoreSpy: FeedStore {
     }
     
     func completeDeletion(with error: Error, at index: Int = 0) {
-        deletionCompletions[index](error)
+        deletionCompletions[index](.failure(error))
     }
     
     func completeDeletionSuccessfully(at index: Int = 0) {
-        self.deletionCompletions[index](nil)
+        self.deletionCompletions[index](.success(()))
     }
     
     func completeInsertion(with error: Error, at index: Int = 0) {
-        self.insertionCompletions[index](error)
+        self.insertionCompletions[index](.failure(error))
     }
     
     func completeInsertionSuccessfully(at index: Int = 0) {
-        self.insertionCompletions[index](nil)
+        self.insertionCompletions[index](.success(()))
     }
     
     func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
@@ -57,10 +57,10 @@ class FeedStoreSpy: FeedStore {
     }
     
     func completeRetrievalWithEmptyCache(at index: Int = 0) {
-        self.retrievalCompletions[index](.empty)
+        self.retrievalCompletions[index](.success(.none))
     }
     
     func completeRetrieval(with feed: [LocalFeedImage], timestamp: Date, at index: Int = 0) {
-        self.retrievalCompletions[index](.found(feed: feed, timestamp: timestamp))
+        self.retrievalCompletions[index](.success(CachedFeed(feed: feed, timestamp: timestamp)))
     }
 }
