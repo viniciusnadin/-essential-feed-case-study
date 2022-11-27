@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FeedImageCell.swift
 //  Prototype
 //
 //  Created by Vinicius Nadin on 27/11/22.
@@ -7,29 +7,9 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        tableView.separatorStyle = .none
-        self.registerPrototypeCell()
-    }
+class FeedImageCell: UITableViewCell {
     
-    private func registerPrototypeCell() {
-        tableView.register(PrototypeCell.self, forCellReuseIdentifier: "PrototypeCell")
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "PrototypeCell")!
-    }
-}
-
-class PrototypeCell: UITableViewCell {
+    static let reuseIdentifier = "FeedImageCell"
     
     private lazy var locationImageViewContainer: UIView = {
         let view = UIView()
@@ -142,3 +122,4 @@ class PrototypeCell: UITableViewCell {
     }
     
 }
+
