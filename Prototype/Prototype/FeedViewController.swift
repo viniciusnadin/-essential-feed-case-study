@@ -14,6 +14,8 @@ struct FeedImageViewModel {
 }
 
 class FeedViewController: UITableViewController {
+    
+    private let feed = FeedImageViewModel.prototypeFeed
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +30,12 @@ class FeedViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        feed.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: FeedImageCell.reuseIdentifier)!
+        let cell = tableView.dequeueReusableCell(withIdentifier: FeedImageCell.reuseIdentifier) as! FeedImageCell
+        cell.configure(with: feed[indexPath.row])
+        return cell
     }
 }

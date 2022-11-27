@@ -78,6 +78,16 @@ class FeedImageCell: UITableViewCell {
         createLocationConstraints()
     }
     
+    func configure(with model: FeedImageViewModel) {
+        mainLabel.text = model.description
+        mainLabel.isHidden = model.description == nil
+        
+        mainImageView.image = UIImage(named: model.imageName)
+        
+        locationLabel.text = model.location
+        locationContainer.isHidden = model.location == nil
+    }
+    
     private func createLocationConstraints() {
         addSubview(mainContainer)
         mainContainer.addArrangedSubview(locationContainer)
