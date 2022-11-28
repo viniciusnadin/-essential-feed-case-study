@@ -27,7 +27,8 @@ class FeedImageCell: UITableViewCell {
     private lazy var locationLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
-        label.text = "Guarapuava \n Parana"
+        label.textColor = UIColor(red: 155/255, green: 155/255, blue: 155/255, alpha: 1.0)
+        label.font = label.font.withSize(15)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -36,7 +37,7 @@ class FeedImageCell: UITableViewCell {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.alignment = .top
-        stackView.spacing = 5
+        stackView.spacing = 6
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -50,7 +51,7 @@ class FeedImageCell: UITableViewCell {
     private lazy var imageContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .lightGray
+        view.backgroundColor = UIColor(red: 227/255, green: 227/255, blue: 227/255, alpha: 1.0)
         view.layer.cornerRadius = 22
         view.clipsToBounds = true
         return view
@@ -67,8 +68,9 @@ class FeedImageCell: UITableViewCell {
     private lazy var mainLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 6
-        label.text = "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing."
+        label.textColor = UIColor(red: 74/255, green: 74/255, blue: 74/255, alpha: 1.0)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = label.font.withSize(16)
         return label
     }()
     
@@ -118,8 +120,8 @@ class FeedImageCell: UITableViewCell {
         imageContainer.addSubview(mainImageView)
         locationImageViewContainer.addSubview(locationBadgeImageView)
         
-        let topConstraint = mainContainer.topAnchor.constraint(equalTo: self.topAnchor, constant: 15)
-        let bottomConstraint = mainContainer.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15)
+        let topConstraint = mainContainer.topAnchor.constraint(equalTo: self.topAnchor, constant: 6)
+        let bottomConstraint = mainContainer.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -6)
         
         topConstraint.priority = UILayoutPriority(999)
         bottomConstraint.priority = UILayoutPriority(999)
