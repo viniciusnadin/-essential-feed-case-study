@@ -23,6 +23,9 @@ class FeedViewController: UITableViewController {
         tableView.separatorStyle = .none
         registerPrototypeCell()
         title = "My Feed"
+        
+        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 16))
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 16))
     }
     
     private func registerPrototypeCell() {
