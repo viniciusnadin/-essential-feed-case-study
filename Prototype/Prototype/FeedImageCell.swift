@@ -78,14 +78,32 @@ class FeedImageCell: UITableViewCell {
         createLocationConstraints()
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        mainImageView.alpha = 0
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        mainImageView.alpha = 0
+    }
+    
+    private func fadeIn(_ image: UIImage?) {
+        mainImageView.image = image
+        
+        UIView.animate(withDuration: 0.3, delay: 0.3, options: [], animations: {
+            self.mainImageView.alpha = 1
+        })
+    }
+    
     func configure(with model: FeedImageViewModel) {
         mainLabel.text = model.description
         mainLabel.isHidden = model.description == nil
         
-        mainImageView.image = UIImage(named: model.imageName)
-        
         locationLabel.text = model.location
         locationContainer.isHidden = model.location == nil
+        
+        fadeIn(UIImage(named: model.imageName))
     }
     
     private func createLocationConstraints() {
