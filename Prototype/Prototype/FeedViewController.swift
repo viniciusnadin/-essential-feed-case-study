@@ -26,6 +26,7 @@ class FeedViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         refresh()
+        tableView.setContentOffset(CGPoint(x: 0, y: -tableView.contentInset.top), animated: false)
     }
     
     @objc private func refresh() {

@@ -74,31 +74,42 @@ class FeedImageCell: UITableViewCell {
         return label
     }()
     
-    override func didMoveToSuperview() {
-        super.didMoveToSuperview()
-        selectionStyle = .none
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         createLocationConstraints()
+        selectionStyle = .none
+        layoutIfNeeded()
+        
+        self.mainImageView.alpha = 0
+        self.imageContainer.startShimmering()
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        mainImageView.alpha = 0
+    required init?(coder: NSCoder) {
+        fatalError("")
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        mainImageView.alpha = 0
+        
+        self.mainImageView.alpha = 0
+        self.imageContainer.startShimmering()
     }
     
     private func fadeIn(_ image: UIImage?) {
         mainImageView.image = image
-        
-        UIView.animate(withDuration: 0.3, delay: 0.3, options: [], animations: {
+
+        UIView.animate(withDuration: 0.25, delay: 1.25, options: [], animations: {
             self.mainImageView.alpha = 1
-        })
+        }) { completed in
+            if completed {
+                self.imageContainer.stopShimmering()
+            }
+        }
     }
     
     func configure(with model: FeedImageViewModel) {
+        
         mainLabel.text = model.description
         mainLabel.isHidden = model.description == nil
         
@@ -153,3 +164,34 @@ class FeedImageCell: UITableViewCell {
     
 }
 
+private extension UIView {
+    private var shimmerAnimationKey: String {
+        return "shimmer"
+    }
+
+    func startShimmering() {
+        let white = UIColor.white.cgColor
+        let alpha = UIColor.white.withAlphaComponent(0.7).cgColor
+        let width = bounds.width
+        let height = bounds.height
+
+        let gradient = CAGradientLayer()
+        gradient.colors = [alpha, white, alpha]
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.4)
+        gradient.endPoint = CGPoint(x: 1.0, y: 0.6)
+        gradient.locations = [0.4, 0.5, 0.6]
+        gradient.frame = CGRect(x: -width, y: 0, width: width*3, height: height*2)
+        layer.mask = gradient
+
+        let animation = CABasicAnimation(keyPath: #keyPath(CAGradientLayer.locations))
+        animation.fromValue = [0.0, 0.1, 0.2]
+        animation.toValue = [0.8, 0.9, 1.0]
+        animation.duration = 1
+        animation.repeatCount = .infinity
+        gradient.add(animation, forKey: shimmerAnimationKey)
+    }
+
+    func stopShimmering() {
+        layer.mask = nil
+    }
+}
