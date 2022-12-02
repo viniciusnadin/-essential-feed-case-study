@@ -11,6 +11,7 @@
 		5405FB66293980A70090CFE8 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540773AD28EDF3B400A5B212 /* EssentialFeed.framework */; platformFilter = ios; };
 		5405FB67293980A70090CFE8 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 540773AD28EDF3B400A5B212 /* EssentialFeed.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5405FB6B293981430090CFE8 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A8C9A2902252600543E8D /* XCTestCase+MemoryLeakTracking.swift */; };
+		5405FB6D29398BCB0090CFE8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5405FB6C29398BCB0090CFE8 /* FeedViewController.swift */; };
 		540773B828EDF3FC00A5B212 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540773B728EDF3FC00A5B212 /* FeedItem.swift */; };
 		540773BA28EDF47F00A5B212 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540773B928EDF47F00A5B212 /* FeedLoader.swift */; };
 		540773C428EDF68700A5B212 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540773AD28EDF3B400A5B212 /* EssentialFeed.framework */; };
@@ -109,6 +110,7 @@
 
 /* Begin PBXFileReference section */
 		5405FB6329397DBB0090CFE8 /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
+		5405FB6C29398BCB0090CFE8 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		540773AD28EDF3B400A5B212 /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		540773B728EDF3FC00A5B212 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		540773B928EDF47F00A5B212 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 		547CCC8F29343DE600928C40 /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
+				5405FB6C29398BCB0090CFE8 /* FeedViewController.swift */,
 			);
 			path = EssentialFeediOS;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 					};
 					547CCC8D29343DE600928C40 = {
 						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1400;
 					};
 					547CCC9429343DE600928C40 = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -694,6 +698,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5405FB6D29398BCB0090CFE8 /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1018,6 +1023,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1040,6 +1046,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1049,6 +1056,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1080,6 +1088,7 @@
 		547CCCA129343DE600928C40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1106,6 +1115,7 @@
 		547CCCA229343DE600928C40 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
