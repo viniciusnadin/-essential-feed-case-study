@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5405FB6429397DBB0090CFE8 /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5405FB6329397DBB0090CFE8 /* FeedViewControllerTests.swift */; };
+		5405FB66293980A70090CFE8 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540773AD28EDF3B400A5B212 /* EssentialFeed.framework */; platformFilter = ios; };
+		5405FB67293980A70090CFE8 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 540773AD28EDF3B400A5B212 /* EssentialFeed.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		540773B828EDF3FC00A5B212 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540773B728EDF3FC00A5B212 /* FeedItem.swift */; };
 		540773BA28EDF47F00A5B212 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540773B928EDF47F00A5B212 /* FeedLoader.swift */; };
 		540773C428EDF68700A5B212 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540773AD28EDF3B400A5B212 /* EssentialFeed.framework */; };
@@ -53,6 +55,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5405FB68293980A70090CFE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 540773A428EDF3B400A5B212 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 540773AC28EDF3B400A5B212;
+			remoteInfo = EssentialFeed;
+		};
 		540773C528EDF68700A5B212 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 540773A428EDF3B400A5B212 /* Project object */;
@@ -82,6 +91,20 @@
 			remoteInfo = EssentialFeed;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5405FB6A293980A70090CFE8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5405FB67293980A70090CFE8 /* EssentialFeed.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5405FB6329397DBB0090CFE8 /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
@@ -155,6 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5405FB66293980A70090CFE8 /* EssentialFeed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +201,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5405FB65293980A70090CFE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		540773A328EDF3B400A5B212 = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +218,7 @@
 				547CCC8F29343DE600928C40 /* EssentialFeediOS */,
 				547CCC9929343DE600928C40 /* EssentialFeediOSTests */,
 				540773AE28EDF3B400A5B212 /* Products */,
+				5405FB65293980A70090CFE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -450,10 +482,12 @@
 				547CCC8A29343DE600928C40 /* Sources */,
 				547CCC8B29343DE600928C40 /* Frameworks */,
 				547CCC8C29343DE600928C40 /* Resources */,
+				5405FB6A293980A70090CFE8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5405FB69293980A70090CFE8 /* PBXTargetDependency */,
 			);
 			name = EssentialFeediOS;
 			productName = EssentialFeediOS;
@@ -682,6 +716,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5405FB69293980A70090CFE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 540773AC28EDF3B400A5B212 /* EssentialFeed */;
+			targetProxy = 5405FB68293980A70090CFE8 /* PBXContainerItemProxy */;
+		};
 		540773C628EDF68700A5B212 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 540773AC28EDF3B400A5B212 /* EssentialFeed */;
