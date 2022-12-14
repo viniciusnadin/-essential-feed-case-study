@@ -353,7 +353,6 @@
 		544910C22941742200C5ACEB /* Feed UI */ = {
 			isa = PBXGroup;
 			children = (
-				54C3EC4E2948B63200E8E211 /* Models */,
 				54C3EC4B2947F0D300E8E211 /* Composers */,
 				544910B72941719B00C5ACEB /* Controllers */,
 				544910B8294171A400C5ACEB /* Views */,
@@ -430,6 +429,7 @@
 		547CCC8F29343DE600928C40 /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
+				54C3EC58294A053300E8E211 /* Feed Presentation */,
 				544910C42941749B00C5ACEB /* Feed Image Loader */,
 				544910C22941742200C5ACEB /* Feed UI */,
 			);
@@ -506,13 +506,13 @@
 			path = Composers;
 			sourceTree = "<group>";
 		};
-		54C3EC4E2948B63200E8E211 /* Models */ = {
+		54C3EC58294A053300E8E211 /* Feed Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				54C3EC4F2948B63C00E8E211 /* FeedViewModel.swift */,
 				54C3EC512948E7F700E8E211 /* FeedImageViewModel.swift */,
+				54C3EC4F2948B63C00E8E211 /* FeedViewModel.swift */,
 			);
-			path = Models;
+			path = "Feed Presentation";
 			sourceTree = "<group>";
 		};
 		54E66D42291A910E006F2F30 /* Helpers */ = {
