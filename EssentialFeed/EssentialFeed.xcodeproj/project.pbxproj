@@ -60,8 +60,8 @@
 		54B63B3D2918886A00BACF54 /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B63B3C2918886A00BACF54 /* LocalFeedLoader.swift */; };
 		54B63B3F291888E500BACF54 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B63B3E291888E500BACF54 /* FeedStore.swift */; };
 		54C3EC4D2947F0E900E8E211 /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3EC4C2947F0E900E8E211 /* FeedUIComposer.swift */; };
-		54C3EC522948E7F700E8E211 /* FeedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3EC512948E7F700E8E211 /* FeedImageViewModel.swift */; };
 		54C3EC5A294A06C400E8E211 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3EC59294A06C400E8E211 /* FeedPresenter.swift */; };
+		54C3EC60294B556C00E8E211 /* FeedImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C3EC5F294B556C00E8E211 /* FeedImagePresenter.swift */; };
 		54D294FF291A82DA00DE9480 /* RemoteFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D294FE291A82DA00DE9480 /* RemoteFeedItem.swift */; };
 		54D29501291A839400DE9480 /* LocalFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D29500291A839400DE9480 /* LocalFeedImage.swift */; };
 		54E66D41291A9058006F2F30 /* LoadFeedFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E66D40291A9058006F2F30 /* LoadFeedFromCacheUseCaseTests.swift */; };
@@ -173,8 +173,8 @@
 		54B63B3C2918886A00BACF54 /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
 		54B63B3E291888E500BACF54 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 		54C3EC4C2947F0E900E8E211 /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
-		54C3EC512948E7F700E8E211 /* FeedImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageViewModel.swift; sourceTree = "<group>"; };
 		54C3EC59294A06C400E8E211 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		54C3EC5F294B556C00E8E211 /* FeedImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagePresenter.swift; sourceTree = "<group>"; };
 		54D294FE291A82DA00DE9480 /* RemoteFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedItem.swift; sourceTree = "<group>"; };
 		54D29500291A839400DE9480 /* LocalFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImage.swift; sourceTree = "<group>"; };
 		54E66D40291A9058006F2F30 /* LoadFeedFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
@@ -509,8 +509,8 @@
 		54C3EC58294A053300E8E211 /* Feed Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				54C3EC512948E7F700E8E211 /* FeedImageViewModel.swift */,
 				54C3EC59294A06C400E8E211 /* FeedPresenter.swift */,
+				54C3EC5F294B556C00E8E211 /* FeedImagePresenter.swift */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -822,9 +822,9 @@
 				544910C6294174B200C5ACEB /* FeedImageDataLoader.swift in Sources */,
 				544910C8294178D600C5ACEB /* FeedRefreshViewController.swift in Sources */,
 				5405FB71293BD6230090CFE8 /* UIView+Shimmering.swift in Sources */,
+				54C3EC60294B556C00E8E211 /* FeedImagePresenter.swift in Sources */,
 				5405FB6D29398BCB0090CFE8 /* FeedViewController.swift in Sources */,
 				5405FB6F293AFB2D0090CFE8 /* FeedImageCell.swift in Sources */,
-				54C3EC522948E7F700E8E211 /* FeedImageViewModel.swift in Sources */,
 				544910CA2942572900C5ACEB /* FeedImageCellController.swift in Sources */,
 				54C3EC4D2947F0E900E8E211 /* FeedUIComposer.swift in Sources */,
 			);
