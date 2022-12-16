@@ -108,18 +108,6 @@ public final class FeedImageCell: UITableViewCell {
         self.feedImageContainer.isShimmering = true
     }
     
-    private func fadeIn(_ image: UIImage?) {
-        feedImageView.image = image
-
-        UIView.animate(withDuration: 0.25, delay: 1.25, options: [], animations: {
-            self.feedImageView.alpha = 1
-        }) { completed in
-            if completed {
-                self.feedImageContainer.isShimmering = false
-            }
-        }
-    }
-    
     private func createLocationConstraints() {
         addSubview(mainContainer)
         mainContainer.addArrangedSubview(locationContainer)
