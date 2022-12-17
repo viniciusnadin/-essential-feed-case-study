@@ -188,6 +188,7 @@
 		54C3EC7B294CC0FC00E8E211 /* UIImageView+FadeInAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+FadeInAnimation.swift"; sourceTree = "<group>"; };
 		54C3EC83294E543200E8E211 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 		54C3EC85294E545C00E8E211 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
+		54C3EC86294E549B00E8E211 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
 		54D294FE291A82DA00DE9480 /* RemoteFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedItem.swift; sourceTree = "<group>"; };
 		54D29500291A839400DE9480 /* LocalFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImage.swift; sourceTree = "<group>"; };
 		54E66D40291A9058006F2F30 /* LoadFeedFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
@@ -715,6 +716,7 @@
 				en,
 				Base,
 				"pt-BR",
+				el,
 			);
 			mainGroup = 540773A328EDF3B400A5B212;
 			productRefGroup = 540773AE28EDF3B400A5B212 /* Products */;
@@ -919,6 +921,7 @@
 			children = (
 				54C3EC83294E543200E8E211 /* en */,
 				54C3EC85294E545C00E8E211 /* pt-BR */,
+				54C3EC86294E549B00E8E211 /* el */,
 			);
 			name = Feed.strings;
 			sourceTree = "<group>";
