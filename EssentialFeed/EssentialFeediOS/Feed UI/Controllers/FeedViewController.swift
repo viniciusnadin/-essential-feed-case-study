@@ -15,16 +15,18 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     
     var tableModel = [FeedImageCellController]() { didSet { tableView.reloadData() } }
     private var refreshController: FeedRefreshViewController?
-    public let errorView = ErrorView()
+    public var errorView: ErrorView?
     
-    convenience init(refreshController: FeedRefreshViewController) {
+    convenience init(refreshController: FeedRefreshViewController, errorView: ErrorView) {
         self.init()
         self.refreshController = refreshController
+        self.errorView = errorView
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         refreshControl = refreshController?.view
+        tableView.tableHeaderView = errorView
         tableView.prefetchDataSource = self
         tableView.register(FeedImageCell.self, forCellReuseIdentifier: String(describing: FeedImageCell.self))
         refreshController?.refresh()
@@ -43,7 +45,7 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     }
     
     func display(_ viewModel: FeedErrorViewModel) {
-        errorView.message = viewModel.message
+        errorView?.message = viewModel.message
     }
     
     public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
