@@ -7,10 +7,6 @@
 
 import UIKit
 
-public final class ErrorView: UIView {
-    public var message: String?
-}
-
 public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching, FeedErrorView {
     
     var tableModel = [FeedImageCellController]() { didSet { tableView.reloadData() } }
