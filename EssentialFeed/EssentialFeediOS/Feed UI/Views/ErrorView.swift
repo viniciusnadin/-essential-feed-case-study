@@ -12,6 +12,7 @@ public final class ErrorView: UIView {
     private lazy var errorButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(hideMessageAnimated), for: .touchUpInside)
         return button
     }()
     
@@ -62,7 +63,7 @@ public final class ErrorView: UIView {
         }
     }
     
-    private func hideMessageAnimated() {
+    @objc private func hideMessageAnimated() {
         UIView.animate(
             withDuration: 0.25,
             animations: { self.alpha = 0 },
