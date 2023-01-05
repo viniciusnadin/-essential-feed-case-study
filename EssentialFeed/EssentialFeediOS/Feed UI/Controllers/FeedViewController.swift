@@ -15,17 +15,11 @@ protocol FeedViewControllerDelegate {
 public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching, FeedErrorView, FeedLoadingView {
     
     var delegate: FeedViewControllerDelegate?
+    
     var tableModel = [FeedImageCellController]() {
-        didSet {
-            if Thread.isMainThread {
-                tableView.reloadData()
-            } else {
-                DispatchQueue.main.async { [weak self] in
-                    self?.tableView.reloadData()
-                }
-            }
-        }
+        didSet { tableView.reloadData() }
     }
+    
     public var errorView: ErrorView?
     
     convenience init(delegate: FeedViewControllerDelegate, errorView: ErrorView) {
@@ -90,11 +84,6 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     }
     
     public func display(_ viewModel: FeedLoadingViewModel) {
-        guard Thread.isMainThread else {
-            return DispatchQueue.main.async { [weak self] in self?.display(viewModel) }
-        }
-        
-        
         refreshControl?.update(isRefreshing: viewModel.isLoading)
     }
 }
