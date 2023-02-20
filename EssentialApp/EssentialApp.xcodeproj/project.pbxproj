@@ -10,6 +10,7 @@
 		5460169E29A3EB8B0006B396 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5460169D29A3EB8B0006B396 /* FeedLoaderWithFallbackCompositeTests.swift */; };
 		546016A029A3FBCC0006B396 /* FeedLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5460169F29A3FBCC0006B396 /* FeedLoaderWithFallbackComposite.swift */; };
 		546016A229A3FC3F0006B396 /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546016A129A3FC3F0006B396 /* FeedImageDataLoaderWithFallbackCompositeTests.swift */; };
+		546016A429A3FF4C0006B396 /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546016A329A3FF4C0006B396 /* FeedImageDataLoaderWithFallbackComposite.swift */; };
 		54CCD65529672D5900A5E532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCD65429672D5900A5E532 /* AppDelegate.swift */; };
 		54CCD65729672D5900A5E532 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCD65629672D5900A5E532 /* SceneDelegate.swift */; };
 		54CCD65929672D5900A5E532 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCD65829672D5900A5E532 /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 		5460169D29A3EB8B0006B396 /* FeedLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
 		5460169F29A3FBCC0006B396 /* FeedLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		546016A129A3FC3F0006B396 /* FeedImageDataLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
+		546016A329A3FF4C0006B396 /* FeedImageDataLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		54CCD65129672D5900A5E532 /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CCD65429672D5900A5E532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54CCD65629672D5900A5E532 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				54CCD65F29672D5D00A5E532 /* LaunchScreen.storyboard */,
 				54CCD66229672D5D00A5E532 /* Info.plist */,
 				5460169F29A3FBCC0006B396 /* FeedLoaderWithFallbackComposite.swift */,
+				546016A329A3FF4C0006B396 /* FeedImageDataLoaderWithFallbackComposite.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				54CCD65529672D5900A5E532 /* AppDelegate.swift in Sources */,
 				546016A029A3FBCC0006B396 /* FeedLoaderWithFallbackComposite.swift in Sources */,
 				54CCD65729672D5900A5E532 /* SceneDelegate.swift in Sources */,
+				546016A429A3FF4C0006B396 /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
