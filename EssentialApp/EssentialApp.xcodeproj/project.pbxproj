@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5460169E29A3EB8B0006B396 /* RemoteWithLocalFallbackFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5460169D29A3EB8B0006B396 /* RemoteWithLocalFallbackFeedLoaderTests.swift */; };
+		5460169E29A3EB8B0006B396 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5460169D29A3EB8B0006B396 /* FeedLoaderWithFallbackCompositeTests.swift */; };
 		54CCD65529672D5900A5E532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCD65429672D5900A5E532 /* AppDelegate.swift */; };
 		54CCD65729672D5900A5E532 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCD65629672D5900A5E532 /* SceneDelegate.swift */; };
 		54CCD65929672D5900A5E532 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCD65829672D5900A5E532 /* ViewController.swift */; };
@@ -47,7 +47,7 @@
 
 /* Begin PBXFileReference section */
 		5460169429A3EB650006B396 /* EssentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5460169D29A3EB8B0006B396 /* RemoteWithLocalFallbackFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWithLocalFallbackFeedLoaderTests.swift; sourceTree = "<group>"; };
+		5460169D29A3EB8B0006B396 /* FeedLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
 		54CCD65129672D5900A5E532 /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CCD65429672D5900A5E532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54CCD65629672D5900A5E532 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		5460169529A3EB650006B396 /* EssentialAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				5460169D29A3EB8B0006B396 /* RemoteWithLocalFallbackFeedLoaderTests.swift */,
+				5460169D29A3EB8B0006B396 /* FeedLoaderWithFallbackCompositeTests.swift */,
 			);
 			path = EssentialAppTests;
 			sourceTree = "<group>";
@@ -233,7 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5460169E29A3EB8B0006B396 /* RemoteWithLocalFallbackFeedLoaderTests.swift in Sources */,
+				5460169E29A3EB8B0006B396 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
