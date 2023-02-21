@@ -5,6 +5,7 @@
 //  Created by Vinicius Nadin on 05/01/23.
 //
 
+
 import UIKit
 import CoreData
 import EssentialFeed
@@ -25,6 +26,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let localStoreURL = NSPersistentContainer
             .defaultDirectoryURL()
             .appendingPathComponent("feed-store.sqlite")
+        
+        if CommandLine.arguments.contains("-reset") {
+            try? FileManager.default.removeItem(at: localStoreURL)
+        }
         
         let localStore = try! CoreDataFeedStore(storeURL: localStoreURL)
         let localFeedLoader = LocalFeedLoader(store: localStore, currentDate: Date.init)
@@ -62,7 +67,5 @@ private class AlwaysFailingHTTPClient: HTTPClient {
     func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
         completion(.failure(NSError(domain: "offline", code: 0)))
         return Task()
-        
     }
 }
-
