@@ -8,26 +8,19 @@
 import UIKit
 import EssentialFeed
 
-protocol FeedViewControllerDelegate {
+public protocol FeedViewControllerDelegate {
     func didRequestFeedRefresh()
 }
 
 public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching, FeedErrorView, FeedLoadingView {
-    
-    var delegate: FeedViewControllerDelegate?
-    
-    var tableModel = [FeedImageCellController]() {
+        
+    private var tableModel = [FeedImageCellController]() {
         didSet { tableView.reloadData() }
     }
     
+    public var delegate: FeedViewControllerDelegate?
     public var errorView: ErrorView?
-    
-    convenience init(delegate: FeedViewControllerDelegate, errorView: ErrorView) {
-        self.init()
-        self.errorView = errorView
-        self.delegate = delegate
-    }
-    
+
     public override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,6 +42,10 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     
     public override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cancelCellControllerLoad(forRowAt: indexPath)
+    }
+    
+    public func display(_ cellControllers: [FeedImageCellController]) {
+        tableModel = cellControllers
     }
     
     public func display(_ viewModel: FeedErrorViewModel) {
