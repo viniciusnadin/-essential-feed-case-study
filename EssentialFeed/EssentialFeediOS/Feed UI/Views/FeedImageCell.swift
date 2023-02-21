@@ -99,7 +99,7 @@ public final class FeedImageCell: UITableViewCell {
         
         self.feedImageView.alpha = 0
         self.feedImageContainer.isShimmering = true
-        self.accessibilityIdentifier = feedImageAccessibilityIdentifier
+        self.accessibilityIdentifier = feedAccessibilityIdentifier
     }
     
     required init?(coder: NSCoder) {
