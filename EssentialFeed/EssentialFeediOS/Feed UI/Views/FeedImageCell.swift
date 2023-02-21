@@ -9,6 +9,9 @@ import UIKit
 
 public final class FeedImageCell: UITableViewCell {
     
+    private let feedAccessibilityIdentifier: String = "feed-image-cell"
+    private let feedImageAccessibilityIdentifier: String = "feed-image-view"
+    
     private(set) public lazy var feedImageRetryButton: UIButton = {
         let button = UIButton()
         button.setTitle("↻", for: .normal)
@@ -57,6 +60,7 @@ public final class FeedImageCell: UITableViewCell {
     public lazy var feedImageView: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.accessibilityIdentifier = feedImageAccessibilityIdentifier
         return view
     }()
     
@@ -95,6 +99,7 @@ public final class FeedImageCell: UITableViewCell {
         
         self.feedImageView.alpha = 0
         self.feedImageContainer.isShimmering = true
+        self.accessibilityIdentifier = feedAccessibilityIdentifier
     }
     
     required init?(coder: NSCoder) {
