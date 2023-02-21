@@ -22,7 +22,6 @@
 		546016B929A40C3D0006B396 /* XCTestCase+FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546016B829A40C3D0006B396 /* XCTestCase+FeedImageDataLoader.swift */; };
 		546016BD29A40D7E0006B396 /* FeedImageDataLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546016BC29A40D7E0006B396 /* FeedImageDataLoaderCacheDecorator.swift */; };
 		546016C529A54AE60006B396 /* EssentialAppUIAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546016C429A54AE60006B396 /* EssentialAppUIAcceptanceTests.swift */; };
-		546016C729A54AE60006B396 /* EssentialAppUIAcceptanceTestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546016C629A54AE60006B396 /* EssentialAppUIAcceptanceTestsLaunchTests.swift */; };
 		54CCD65529672D5900A5E532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCD65429672D5900A5E532 /* AppDelegate.swift */; };
 		54CCD65729672D5900A5E532 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCD65629672D5900A5E532 /* SceneDelegate.swift */; };
 		54CCD65929672D5900A5E532 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCD65829672D5900A5E532 /* ViewController.swift */; };
@@ -85,7 +84,6 @@
 		546016BC29A40D7E0006B396 /* FeedImageDataLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderCacheDecorator.swift; sourceTree = "<group>"; };
 		546016C229A54AE60006B396 /* EssentialAppUIAcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppUIAcceptanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		546016C429A54AE60006B396 /* EssentialAppUIAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUIAcceptanceTests.swift; sourceTree = "<group>"; };
-		546016C629A54AE60006B396 /* EssentialAppUIAcceptanceTestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUIAcceptanceTestsLaunchTests.swift; sourceTree = "<group>"; };
 		54CCD65129672D5900A5E532 /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CCD65429672D5900A5E532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54CCD65629672D5900A5E532 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				546016C429A54AE60006B396 /* EssentialAppUIAcceptanceTests.swift */,
-				546016C629A54AE60006B396 /* EssentialAppUIAcceptanceTestsLaunchTests.swift */,
 			);
 			path = EssentialAppUIAcceptanceTests;
 			sourceTree = "<group>";
@@ -357,7 +354,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				546016C729A54AE60006B396 /* EssentialAppUIAcceptanceTestsLaunchTests.swift in Sources */,
 				546016C529A54AE60006B396 /* EssentialAppUIAcceptanceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
