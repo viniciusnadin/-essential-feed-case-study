@@ -99,6 +99,7 @@
 		D558A79A2A22F9410050E394 /* EMPTY_FEED_light.png in Resources */ = {isa = PBXBuildFile; fileRef = D558A7922A22F9410050E394 /* EMPTY_FEED_light.png */; };
 		D558A79B2A22F9410050E394 /* FEED_WITH_ERROR_MESSAGE_light.png in Resources */ = {isa = PBXBuildFile; fileRef = D558A7932A22F9410050E394 /* FEED_WITH_ERROR_MESSAGE_light.png */; };
 		D558A79C2A22F9410050E394 /* FEED_WITH_FAILED_IMAGE_LOADING_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = D558A7942A22F9410050E394 /* FEED_WITH_FAILED_IMAGE_LOADING_dark.png */; };
+		D558A79E2A22F9BC0050E394 /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558A79D2A22F9BC0050E394 /* UIViewController+Snapshot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,6 +245,7 @@
 		D558A7922A22F9410050E394 /* EMPTY_FEED_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EMPTY_FEED_light.png; sourceTree = "<group>"; };
 		D558A7932A22F9410050E394 /* FEED_WITH_ERROR_MESSAGE_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_ERROR_MESSAGE_light.png; sourceTree = "<group>"; };
 		D558A7942A22F9410050E394 /* FEED_WITH_FAILED_IMAGE_LOADING_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_FAILED_IMAGE_LOADING_dark.png; sourceTree = "<group>"; };
+		D558A79D2A22F9BC0050E394 /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -603,6 +605,7 @@
 			isa = PBXGroup;
 			children = (
 				D558A7802A22F6ED0050E394 /* UIImage+TestHelpers.swift */,
+				D558A79D2A22F9BC0050E394 /* UIViewController+Snapshot.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -972,6 +975,7 @@
 			files = (
 				5405FB6B293981430090CFE8 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				D558A77C2A22F50A0050E394 /* FeedSnapshotTests.swift in Sources */,
+				D558A79E2A22F9BC0050E394 /* UIViewController+Snapshot.swift in Sources */,
 				D558A7812A22F6ED0050E394 /* UIImage+TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
