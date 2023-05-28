@@ -12,44 +12,53 @@ public protocol FeedViewControllerDelegate {
     func didRequestFeedRefresh()
 }
 
-public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching, FeedErrorView, FeedLoadingView {
-        
+public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching, FeedLoadingView, FeedErrorView {
+    @IBOutlet private(set) public var errorView: ErrorView?
+    
     private var tableModel = [FeedImageCellController]() {
         didSet { tableView.reloadData() }
     }
     
     public var delegate: FeedViewControllerDelegate?
-    public var errorView: ErrorView?
-
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
-        refreshControl = refreshControl()
-        tableView.tableHeaderView = errorView
-        tableView.prefetchDataSource = self
-        tableView.register(FeedImageCell.self, forCellReuseIdentifier: String(describing: FeedImageCell.self))
         
         refresh()
     }
     
-    public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tableModel.count
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        tableView.sizeTableHeaderToFit()
     }
     
-    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        cellController(forRowAt: indexPath).view(in: tableView)
-    }
-    
-    public override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cancelCellControllerLoad(forRowAt: indexPath)
+    @IBAction private func refresh() {
+        delegate?.didRequestFeedRefresh()
     }
     
     public func display(_ cellControllers: [FeedImageCellController]) {
         tableModel = cellControllers
     }
     
+    public func display(_ viewModel: FeedLoadingViewModel) {
+        refreshControl?.update(isRefreshing: viewModel.isLoading)
+    }
+    
     public func display(_ viewModel: FeedErrorViewModel) {
         errorView?.message = viewModel.message
+    }
+    
+    public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableModel.count
+    }
+    
+    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return cellController(forRowAt: indexPath).view(in: tableView)
+    }
+    
+    public override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cancelCellControllerLoad(forRowAt: indexPath)
     }
     
     public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
@@ -63,24 +72,10 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     }
     
     private func cellController(forRowAt indexPath: IndexPath) -> FeedImageCellController {
-        tableModel[indexPath.row]
+        return tableModel[indexPath.row]
     }
     
     private func cancelCellControllerLoad(forRowAt indexPath: IndexPath) {
         cellController(forRowAt: indexPath).cancelLoad()
-    }
-    
-    private func refreshControl() -> UIRefreshControl {
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
-        return refreshControl
-    }
-    
-    @objc func refresh() {
-        delegate?.didRequestFeedRefresh()
-    }
-    
-    public func display(_ viewModel: FeedLoadingViewModel) {
-        refreshControl?.update(isRefreshing: viewModel.isLoading)
     }
 }
