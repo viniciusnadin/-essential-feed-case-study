@@ -15,7 +15,7 @@ class FeedSnapshotTests: XCTestCase {
         let sut = makeSUT()
         
         sut.display(emptyFeed())
-
+        
         record(snapshot: sut.snapshot(), named: "EMPTY_FEED")
     }
     
@@ -23,12 +23,20 @@ class FeedSnapshotTests: XCTestCase {
         let sut = makeSUT()
         
         sut.display(feedWithContent())
-
+        
         record(snapshot: sut.snapshot(), named: "FEED_WITH_CONTENT")
     }
     
+    func test_feedWithErrorMessage() {
+        let sut = makeSUT()
+        
+        sut.display(.error(message: "This is a\nmulti-line\nerror message"))
+        
+        record(snapshot: sut.snapshot(), named: "FEED_WITH_ERROR_MESSAGE")
+    }
+    
     // MARK: - Helpers
-
+    
     private func makeSUT() -> FeedViewController {
         let bundle = Bundle(for: FeedViewController.self)
         let storyboard = UIStoryboard(name: "Feed", bundle: bundle)
@@ -105,7 +113,7 @@ private extension FeedViewController {
 private class ImageStub: FeedImageCellControllerDelegate {
     let viewModel: FeedImageViewModel<UIImage>
     weak var controller: FeedImageCellController?
-
+    
     init(description: String?, location: String?, image: UIImage?) {
         viewModel = FeedImageViewModel(
             description: description,

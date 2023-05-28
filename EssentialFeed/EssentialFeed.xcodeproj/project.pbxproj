@@ -93,6 +93,7 @@
 		D558A7852A22F7170050E394 /* EMPTY_FEED.png in Resources */ = {isa = PBXBuildFile; fileRef = D558A7832A22F7170050E394 /* EMPTY_FEED.png */; };
 		D558A7862A22F7170050E394 /* FEED_WITH_CONTENT.png in Resources */ = {isa = PBXBuildFile; fileRef = D558A7842A22F7170050E394 /* FEED_WITH_CONTENT.png */; };
 		D558A7882A22F7640050E394 /* UITableView+HeaderSizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558A7872A22F7640050E394 /* UITableView+HeaderSizing.swift */; };
+		D558A78A2A22F7D20050E394 /* FEED_WITH_ERROR_MESSAGE.png in Resources */ = {isa = PBXBuildFile; fileRef = D558A7892A22F7D20050E394 /* FEED_WITH_ERROR_MESSAGE.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,6 +233,7 @@
 		D558A7832A22F7170050E394 /* EMPTY_FEED.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EMPTY_FEED.png; sourceTree = "<group>"; };
 		D558A7842A22F7170050E394 /* FEED_WITH_CONTENT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_CONTENT.png; sourceTree = "<group>"; };
 		D558A7872A22F7640050E394 /* UITableView+HeaderSizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderSizing.swift"; sourceTree = "<group>"; };
+		D558A7892A22F7D20050E394 /* FEED_WITH_ERROR_MESSAGE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_ERROR_MESSAGE.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -600,6 +602,7 @@
 			children = (
 				D558A7832A22F7170050E394 /* EMPTY_FEED.png */,
 				D558A7842A22F7170050E394 /* FEED_WITH_CONTENT.png */,
+				D558A7892A22F7D20050E394 /* FEED_WITH_ERROR_MESSAGE.png */,
 			);
 			path = snapshots;
 			sourceTree = "<group>";
@@ -830,6 +833,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D558A7852A22F7170050E394 /* EMPTY_FEED.png in Resources */,
+				D558A78A2A22F7D20050E394 /* FEED_WITH_ERROR_MESSAGE.png in Resources */,
 				D558A7862A22F7170050E394 /* FEED_WITH_CONTENT.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
