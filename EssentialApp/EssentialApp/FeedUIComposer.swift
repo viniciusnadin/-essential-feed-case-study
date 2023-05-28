@@ -13,10 +13,13 @@ public final class FeedUIComposer {
     private init() {}
     
     public static func feedComposedWith(feedLoader: FeedLoader, imageLoader: FeedImageDataLoader) -> FeedViewController {
-        let presentationAdapter = FeedLoaderPresentationAdapter(feedLoader: MainQueueDispatchDecorator(decoratee: feedLoader))
+        let presentationAdapter = FeedLoaderPresentationAdapter(feedLoader:
+            MainQueueDispatchDecorator(decoratee: feedLoader))
         
-        let feedController = makeFeedViewController(delegate: presentationAdapter, errorView: ErrorView(), title: FeedPresenter.title)
-        
+        let feedController = makeFeedViewController(
+            delegate: presentationAdapter,
+            title: FeedPresenter.title)
+
         presentationAdapter.presenter = FeedPresenter(
             feedView: FeedViewAdapter(
                 controller: feedController,
@@ -26,11 +29,12 @@ public final class FeedUIComposer {
         
         return feedController
     }
-    
-    private static func makeFeedViewController(delegate: FeedViewControllerDelegate, errorView: ErrorView, title: String) -> FeedViewController {
-        let feedController = FeedViewController()
+
+    private static func makeFeedViewController(delegate: FeedViewControllerDelegate, title: String) -> FeedViewController {
+        let bundle = Bundle(for: FeedViewController.self)
+        let storyboard = UIStoryboard(name: "Feed", bundle: bundle)
+        let feedController = storyboard.instantiateInitialViewController() as! FeedViewController
         feedController.delegate = delegate
-        feedController.errorView = errorView
         feedController.title = title
         return feedController
     }
