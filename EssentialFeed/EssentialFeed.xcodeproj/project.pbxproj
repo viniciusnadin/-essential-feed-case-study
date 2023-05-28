@@ -92,6 +92,7 @@
 		D558A7812A22F6ED0050E394 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558A7802A22F6ED0050E394 /* UIImage+TestHelpers.swift */; };
 		D558A7852A22F7170050E394 /* EMPTY_FEED.png in Resources */ = {isa = PBXBuildFile; fileRef = D558A7832A22F7170050E394 /* EMPTY_FEED.png */; };
 		D558A7862A22F7170050E394 /* FEED_WITH_CONTENT.png in Resources */ = {isa = PBXBuildFile; fileRef = D558A7842A22F7170050E394 /* FEED_WITH_CONTENT.png */; };
+		D558A7882A22F7640050E394 /* UITableView+HeaderSizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558A7872A22F7640050E394 /* UITableView+HeaderSizing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +231,7 @@
 		D558A7802A22F6ED0050E394 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 		D558A7832A22F7170050E394 /* EMPTY_FEED.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EMPTY_FEED.png; sourceTree = "<group>"; };
 		D558A7842A22F7170050E394 /* FEED_WITH_CONTENT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_CONTENT.png; sourceTree = "<group>"; };
+		D558A7872A22F7640050E394 /* UITableView+HeaderSizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderSizing.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +368,7 @@
 				54C3EC79294CBFA400E8E211 /* UITableView+Dequeueing.swift */,
 				5405FB70293BD6230090CFE8 /* UIView+Shimmering.swift */,
 				5445F63C295B342900A85478 /* UIRefreshControl+Helpers.swift */,
+				D558A7872A22F7640050E394 /* UITableView+HeaderSizing.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -927,6 +930,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D558A7882A22F7640050E394 /* UITableView+HeaderSizing.swift in Sources */,
 				54C3EC7A294CBFA400E8E211 /* UITableView+Dequeueing.swift in Sources */,
 				5405FB71293BD6230090CFE8 /* UIView+Shimmering.swift in Sources */,
 				5445F63D295B342900A85478 /* UIRefreshControl+Helpers.swift in Sources */,
