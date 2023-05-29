@@ -51,6 +51,7 @@
 		54D928C229A581E4008F23D4 /* FeedAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D928C129A581E4008F23D4 /* FeedAcceptanceTests.swift */; };
 		54D928C429A5859D008F23D4 /* HTTPClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D928C329A5859D008F23D4 /* HTTPClientStub.swift */; };
 		54D928C629A585DC008F23D4 /* InMemoryFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D928C529A585DC008F23D4 /* InMemoryFeedStore.swift */; };
+		D558A7A22A242A100050E394 /* UIView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558A7A12A242A100050E394 /* UIView+TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		54D928C129A581E4008F23D4 /* FeedAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAcceptanceTests.swift; sourceTree = "<group>"; };
 		54D928C329A5859D008F23D4 /* HTTPClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientStub.swift; sourceTree = "<group>"; };
 		54D928C529A585DC008F23D4 /* InMemoryFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryFeedStore.swift; sourceTree = "<group>"; };
+		D558A7A12A242A100050E394 /* UIView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TestHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				546016B829A40C3D0006B396 /* XCTestCase+FeedImageDataLoader.swift */,
 				54D928C329A5859D008F23D4 /* HTTPClientStub.swift */,
 				54D928C529A585DC008F23D4 /* InMemoryFeedStore.swift */,
+				D558A7A12A242A100050E394 /* UIView+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				54D928B729A57EED008F23D4 /* FeedUIIntegrationTests+LoaderSpy.swift in Sources */,
 				54D928C429A5859D008F23D4 /* HTTPClientStub.swift in Sources */,
 				54D928BD29A57EED008F23D4 /* FeedUIIntegrationTests+Localization.swift in Sources */,
+				D558A7A22A242A100050E394 /* UIView+TestHelpers.swift in Sources */,
 				546016AD29A408720006B396 /* FeedLoaderStub.swift in Sources */,
 				54D928BB29A57EED008F23D4 /* UIRefreshControl+TestHelpers.swift in Sources */,
 				54D928C229A581E4008F23D4 /* FeedAcceptanceTests.swift in Sources */,
