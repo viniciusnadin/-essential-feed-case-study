@@ -19,7 +19,7 @@ public final class LocalFeedLoader {
 
 extension LocalFeedLoader: FeedCache {
     public typealias SaveResult = FeedCache.Result
-    
+
     public func save(_ feed: [FeedImage], completion: @escaping (SaveResult) -> Void) {
         store.deleteCachedFeed { [weak self] deletionResult in
             guard let self = self else { return }
@@ -27,7 +27,7 @@ extension LocalFeedLoader: FeedCache {
             switch deletionResult {
             case .success:
                 self.cache(feed, with: completion)
-                
+            
             case let .failure(error):
                 completion(.failure(error))
             }
@@ -43,9 +43,9 @@ extension LocalFeedLoader: FeedCache {
     }
 }
 
-extension LocalFeedLoader: FeedLoader {
-    public typealias LoadResult = FeedLoader.Result
-    
+extension LocalFeedLoader {
+    public typealias LoadResult = Swift.Result<[FeedImage], Error>
+
     public func load(completion: @escaping (LoadResult) -> Void) {
         store.retrieve { [weak self] result in
             guard let self = self else { return }
@@ -53,7 +53,7 @@ extension LocalFeedLoader: FeedLoader {
             switch result {
             case let .failure(error):
                 completion(.failure(error))
-                
+
             case let .success(.some(cache)) where FeedCachePolicy.validate(cache.timestamp, against: self.currentDate()):
                 completion(.success(cache.feed.toModels()))
                 
@@ -66,7 +66,7 @@ extension LocalFeedLoader: FeedLoader {
 
 extension LocalFeedLoader {
     public typealias ValidationResult = Result<Void, Error>
-    
+
     public func validateCache(completion: @escaping (ValidationResult) -> Void) {
         store.retrieve { [weak self] result in
             guard let self = self else { return }
