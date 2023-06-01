@@ -9,7 +9,7 @@ import XCTest
 import EssentialFeed
 
 class EssentialFeedAPIEndToEndTests: XCTestCase {
-    
+
     func test_endToEndTestServerGETFeedResult_matchesFixedTestAccountData() {
         switch getFeedResult() {
         case let .success(imageFeed)?:
@@ -47,7 +47,7 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
     // MARK: - Helpers
     
     private func getFeedResult(file: StaticString = #file, line: UInt = #line) -> FeedLoader.Result? {
-        let loader = RemoteFeedLoader(url: feedTestServerURL, client: ephemeralClient())
+        let loader = RemoteLoader(url: feedTestServerURL, client: ephemeralClient(), mapper: FeedItemsMapper.map)
         trackForMemoryLeaks(loader, file: file, line: line)
         
         let exp = expectation(description: "Wait for load completion")
@@ -68,7 +68,7 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
         
         let exp = expectation(description: "Wait for load completion")
         let url = feedTestServerURL.appendingPathComponent("73A7F70C-75DA-4C2E-B5A3-EED40DC53AA6/image")
-        
+
         var receivedResult: FeedImageDataLoader.Result?
         _ = loader.loadImageData(from: url) { result in
             receivedResult = result
