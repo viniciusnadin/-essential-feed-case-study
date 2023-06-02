@@ -9,7 +9,7 @@ import Foundation
 import EssentialFeed
 
 func uniqueImage() -> FeedImage {
-    return FeedImage(id: UUID(), description: "", location: "", url: anyURL())
+    return FeedImage(id: UUID(), description: "any", location: "any", url: anyURL())
 }
 
 func uniqueImageFeed() -> (models: [FeedImage], local: [LocalFeedImage]) {
@@ -19,21 +19,11 @@ func uniqueImageFeed() -> (models: [FeedImage], local: [LocalFeedImage]) {
 }
 
 extension Date {
-    private var feedCacheMaxAgeInDays: Int {
-        return 7
-    }
-    
     func minusFeedCacheMaxAge() -> Date {
         return adding(days: -feedCacheMaxAgeInDays)
     }
     
-    func adding(days: Int) -> Date {
-        return Calendar(identifier: .gregorian).date(byAdding: .day, value: days, to: self)!
-    }
-}
-
-extension Date {
-    func adding(seconds: TimeInterval) -> Date {
-        return self + seconds
+    private var feedCacheMaxAgeInDays: Int {
+        return 7
     }
 }
