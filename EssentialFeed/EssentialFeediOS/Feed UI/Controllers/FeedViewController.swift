@@ -12,15 +12,15 @@ public protocol FeedViewControllerDelegate {
     func didRequestFeedRefresh()
 }
 
-public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching, ResourceLoadingView, FeedErrorView {
+public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching, ResourceLoadingView, ResourceErrorView {
     @IBOutlet private(set) public var errorView: ErrorView?
-
+    
     private var loadingControllers = [IndexPath: FeedImageCellController]()
     
     private var tableModel = [FeedImageCellController]() {
         didSet { tableView.reloadData() }
     }
-
+    
     public var delegate: FeedViewControllerDelegate?
     
     public override func viewDidLoad() {
@@ -31,7 +31,7 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-
+        
         tableView.sizeTableHeaderToFit()
     }
     
@@ -43,15 +43,15 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
         loadingControllers = [:]
         tableModel = cellControllers
     }
-
+    
     public func display(_ viewModel: ResourceLoadingViewModel) {
         refreshControl?.update(isRefreshing: viewModel.isLoading)
     }
     
-    public func display(_ viewModel: FeedErrorViewModel) {
+    public func display(_ viewModel: ResourceErrorViewModel) {
         errorView?.message = viewModel.message
     }
-
+    
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableModel.count
     }
