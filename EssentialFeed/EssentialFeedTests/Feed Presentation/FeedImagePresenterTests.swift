@@ -10,6 +10,15 @@ import EssentialFeed
 
 class FeedImagePresenterTests: XCTestCase {
     
+    func test_map_createsViewModel() {
+        let image = uniqueImage()
+        
+        let viewModel = FeedImagePresenter<ViewSpy, AnyImage>.map(image)
+        
+        XCTAssertEqual(viewModel.description, image.description)
+        XCTAssertEqual(viewModel.location, image.location)
+    }
+    
     func test_init_doesNotSendMessagesToView() {
         let (_, view) = makeSUT()
         
@@ -84,7 +93,6 @@ class FeedImagePresenterTests: XCTestCase {
         file: StaticString = #file,
         line: UInt = #line
     ) -> (sut: FeedImagePresenter<ViewSpy, AnyImage>, view: ViewSpy) {
-        
         let view = ViewSpy()
         let sut = FeedImagePresenter(view: view, imageTransformer: imageTransformer)
         trackForMemoryLeaks(view, file: file, line: line)
@@ -100,7 +108,6 @@ class FeedImagePresenterTests: XCTestCase {
     
     private class ViewSpy: FeedImageView {
         private(set) var messages = [FeedImageViewModel<AnyImage>]()
-        
         
         func display(_ model: FeedImageViewModel<AnyImage>) {
             messages.append(model)
