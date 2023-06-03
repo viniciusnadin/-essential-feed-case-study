@@ -119,6 +119,7 @@
 		D5E7D5142A2BF91100149637 /* ImageComments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5E7D5132A2BF91000149637 /* ImageComments.storyboard */; };
 		D5E7D5172A2BF96700149637 /* IMAGE_COMMENTS_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = D5E7D5152A2BF96700149637 /* IMAGE_COMMENTS_dark.png */; };
 		D5E7D5182A2BF96700149637 /* IMAGE_COMMENTS_light.png in Resources */ = {isa = PBXBuildFile; fileRef = D5E7D5162A2BF96700149637 /* IMAGE_COMMENTS_light.png */; };
+		D5E7D51A2A2BFBFC00149637 /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E7D5192A2BFBFC00149637 /* CellController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -288,6 +289,7 @@
 		D5E7D5132A2BF91000149637 /* ImageComments.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageComments.storyboard; sourceTree = "<group>"; };
 		D5E7D5152A2BF96700149637 /* IMAGE_COMMENTS_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMAGE_COMMENTS_dark.png; sourceTree = "<group>"; };
 		D5E7D5162A2BF96700149637 /* IMAGE_COMMENTS_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMAGE_COMMENTS_light.png; sourceTree = "<group>"; };
+		D5E7D5192A2BFBFC00149637 /* CellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -775,6 +777,7 @@
 			isa = PBXGroup;
 			children = (
 				5405FB6C29398BCB0090CFE8 /* ListViewController.swift */,
+				D5E7D5192A2BFBFC00149637 /* CellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1218,6 +1221,7 @@
 				544910CA2942572900C5ACEB /* FeedImageCellController.swift in Sources */,
 				5445F636295A2EA100A85478 /* ErrorView.swift in Sources */,
 				54C3EC7C294CC0FC00E8E211 /* UIImageView+FadeInAnimation.swift in Sources */,
+				D5E7D51A2A2BFBFC00149637 /* CellController.swift in Sources */,
 				D5E7D50D2A2BF89300149637 /* ImageCommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
