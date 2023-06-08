@@ -46,7 +46,7 @@ class FeedUIIntegrationTests: XCTestCase {
         
         sut.simulateUserInitiatedReload()
         XCTAssertEqual(loader.loadFeedCallCount, 1, "Expected no request until previous completes")
-
+        
         loader.completeFeedLoading(at: 0)
         sut.simulateUserInitiatedReload()
         XCTAssertEqual(loader.loadFeedCallCount, 2, "Expected another loading request once user initiates a reload")
@@ -482,6 +482,11 @@ class FeedUIIntegrationTests: XCTestCase {
         sut.simulateFeedImageViewNotVisible(at: 0)
         sut.simulateFeedImageViewVisible(at: 0)
         XCTAssertEqual(loader.loadedImageURLs, [image.url, image.url, image.url], "Expected third request when visible after canceling previous complete")
+        
+        sut.simulateLoadMoreFeedAction()
+        loader.completeLoadMore(with: [image, makeImage()])
+        sut.simulateFeedImageViewVisible(at: 0)
+        XCTAssertEqual(loader.loadedImageURLs, [image.url, image.url, image.url], "Expected no request until previous completes")
     }
     
     // MARK: - Helpers
