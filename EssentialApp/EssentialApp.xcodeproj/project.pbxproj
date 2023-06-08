@@ -37,6 +37,7 @@
 		D51B573D2A2679DC00AF1094 /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51B573C2A2679DC00AF1094 /* CombineHelpers.swift */; };
 		D51F1AC82A2E6C80005E3F1D /* CommentsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51F1AC72A2E6C80005E3F1D /* CommentsUIComposer.swift */; };
 		D51F1ACA2A2E6C9C005E3F1D /* CommentsUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51F1AC92A2E6C9C005E3F1D /* CommentsUIIntegrationTests.swift */; };
+		D51F1B042A327FFA005E3F1D /* NullStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51F1B032A327FFA005E3F1D /* NullStore.swift */; };
 		D558A7A22A242A100050E394 /* UIView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558A7A12A242A100050E394 /* UIView+TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		D51B573C2A2679DC00AF1094 /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
 		D51F1AC72A2E6C80005E3F1D /* CommentsUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsUIComposer.swift; sourceTree = "<group>"; };
 		D51F1AC92A2E6C9C005E3F1D /* CommentsUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsUIIntegrationTests.swift; sourceTree = "<group>"; };
+		D51F1B032A327FFA005E3F1D /* NullStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullStore.swift; sourceTree = "<group>"; };
 		D558A7A12A242A100050E394 /* UIView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TestHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +187,7 @@
 				54CCD66229672D5D00A5E532 /* Info.plist */,
 				D51B573C2A2679DC00AF1094 /* CombineHelpers.swift */,
 				D51F1AC72A2E6C80005E3F1D /* CommentsUIComposer.swift */,
+				D51F1B032A327FFA005E3F1D /* NullStore.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				54D928AC29A57ECA008F23D4 /* FeedViewAdapter.swift in Sources */,
 				54D928AA29A57ECA008F23D4 /* FeedUIComposer.swift in Sources */,
 				54CCD65529672D5900A5E532 /* AppDelegate.swift in Sources */,
+				D51F1B042A327FFA005E3F1D /* NullStore.swift in Sources */,
 				54CCD65729672D5900A5E532 /* SceneDelegate.swift in Sources */,
 				54D928A829A57ECA008F23D4 /* LoadResourcePresentationAdapter.swift in Sources */,
 				54D928AB29A57ECA008F23D4 /* WeakRefVirtualProxy.swift in Sources */,
